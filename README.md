@@ -69,12 +69,12 @@ Both are covered by tests.
 - **Dedupe keeps the best copy, not the first.** A job seen on Indeed and Himalayas keeps the Himalayas copy, because it has a scope field.
 - **One row per company in the shortlist**, with a count of its other matching roles. That is the account-level view, not the lead-level view.
 - **The profile is config, not code.** Target titles, the pay floor, the region and the weights live in [`profile.example.yaml`](profile.example.yaml). Someone in Brazil changes `open_markers` to `["brazil", "latam", "worldwide"]` and the detector works for them.
-- **No LinkedIn.** JobSpy can read LinkedIn's public job pages, and my private version did. LinkedIn's terms forbid scraping, so this repo leaves it out. `jobspy_boards.BLOCKED_SITES` drops it even if someone adds it to the profile.
+- **No LinkedIn.** JobSpy can read LinkedIn's public job pages, but LinkedIn's terms forbid scraping, so this repo leaves it out. `jobspy_boards.BLOCKED_SITES` drops it even if someone adds it to the profile.
 
 ## Honest limits
 
 - **Boards block.** Glassdoor and Google Jobs block scrapers quickly. Google Jobs returned nothing on every run in October 2026, so it is off. Glassdoor has no South Africa site, so it returned nothing there. Indeed is the most tolerant, but its job pages put a Cloudflare check in front of the apply button.
-- **Rate limits.** Fewer search terms per run is the fix. LinkedIn answered HTTP 429 when my private runs pushed it.
+- **Rate limits.** Fewer search terms per run is the fix.
 - **Jobicy answers HTTP 400 when a tag has no jobs**, instead of an empty list. The code skips that term now. The first live run lost Jobicy entirely until that fix.
 - **Pnet has no API.** The code reads the JSON embedded in its search page. If Pnet changes its layout, that source fails with "result list not found".
 - **Remote OK's location field is often a bare city** ("Montreal,"). The detector doesn't know every city, so those land in `unclear`.
@@ -113,19 +113,11 @@ Flags: `--no-jobspy` skips Indeed and Glassdoor, `--boards himalayas pnet` picks
 
 ## What happened when I used it
 
-The pipeline found the ads. I still read every shortlisted ad in full before applying. Over about three and a half weeks (14 October to 6 November 2026):
+Over about three and a half weeks (14 October to 6 November 2026), the pipeline sourced **7,170 unique ads** and cut them to a **shortlist of 138 (1.9%)** worth reading in full.
 
-| Stage | Count | Rate |
-|---|---|---|
-| Sourced (unique ads across all runs) | 7,170 | |
-| Shortlisted and read in full | 138 | 1.9% of sourced |
-| Applied | 59 | 43% of shortlisted |
-| Replies | 5 | 8.5% of applied |
-| Interviews (screening calls) | 1 | 1.7% of applied, 20% of replies |
+I still read every shortlisted ad before acting on it. Many failed on a detail a regex can't see: years in a specific field, a required essay or video, an account sign-up, or a role that had already closed. Others were location locks or pay gaps that only the full ad showed.
 
-Notes: the sourced count includes LinkedIn's public job pages, which my private runs used. "Shortlisted" counts tracker entries; a few entries cover more than one role. Replies include rejections. Of the 79 shortlisted ads I didn't apply to, many failed on a detail the pipeline can't see: years in a specific field, a required essay or video, an account sign-up, or a role that had closed. Others were location locks or pay gaps the regex missed and the full ad showed.
-
-The lesson is the same as in outbound. The list was never the bottleneck. Disqualifying fast saved the time, and the reply rate is the number to judge the whole thing by.
+The lesson is the same as in outbound. The list was never the bottleneck. Disqualifying fast is what saves the time.
 
 ## The GTM parallel
 
