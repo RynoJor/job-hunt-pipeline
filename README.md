@@ -144,3 +144,10 @@ pytest -q
 ```
 
 Built with Claude Code. MIT licence.
+
+
+---
+
+**More from me:** [Portfolio and case study](https://rynojor.github.io) · [Revenue Leak Engine](https://github.com/RynoJor/revenue-leak-engine) (the flagship project, with a live dashboard) · [LinkedIn](https://www.linkedin.com/in/ryno-jordaan/)
+
+Built by Ryno Jordaan, GTM engineer.
