@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+out/
+raw*.csv
+# Your own profile stays local. Only the example is committed.
+profile.yaml

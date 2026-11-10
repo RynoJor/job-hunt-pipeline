@@ -1,0 +1,40 @@
+# Copy to profile.yaml (git-ignored) and edit. Every number here is an example.
+
+search:
+  terms: ["GTM engineer", "revenue operations", "sales operations manager",
+          "marketing automation", "growth marketer", "account executive EMEA"]
+  hours_old: 168          # only ads from the last 7 days
+  results_per_term: 30
+  jobspy_sites: ["indeed", "glassdoor"]     # LinkedIn is left out on purpose
+  jobspy_countries: ["usa", "uk", "south africa"]
+
+region:
+  name: South Africa
+  # Words that mean "you can apply from here" in a location or scope field.
+  open_markers: ["south africa", "africa", "emea", "worldwide", "anywhere", "global",
+                 "work from anywhere", "fully distributed"]
+
+titles:
+  # Tier 3 is the bullseye. A title scores by the highest tier it matches (regex, case-insensitive).
+  tier_3: ['\bgtm\b', 'go[- ]to[- ]market', 'rev(?:enue)?\s*ops', 'revenue operations',
+           'sales op', 'marketing (?:automation|ops)', '\bcrm\b', 'hubspot', 'automation']
+  tier_2: ['growth', 'lifecycle', 'demand gen', 'account executive', 'customer success',
+           'solutions? (?:consultant|engineer)', 'implementation', 'partnerships?']
+  tier_1: ['sales', 'business development', 'account manager', '\bsdr\b', '\bbdr\b']
+  exclude: ['software engineer', 'data scientist', 'recruiter', 'designer', 'security',
+            'test automation', 'industrial automation']
+
+seniority:
+  wanted: ["mid", "senior", "lead"]
+
+pay:
+  floor: 72000            # example only
+  currency: USD
+  per: yearly
+  below_floor: disqualify # or "penalise"
+
+weights:                  # points out of 100
+  title: 40
+  remote: 30
+  pay: 20
+  seniority: 10

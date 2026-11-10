@@ -1,0 +1,110 @@
+{
+  "rows_scraped": 1291,
+  "unique_postings": 1014,
+  "remote_open": 95,
+  "remote_locked": 639,
+  "remote_unclear": 280,
+  "pct_locked": 63.0,
+  "pct_open": 9.4,
+  "lock_reasons": {
+    "location is tied to": 249,
+    "board scope is": 211,
+    "title names a territory": 97,
+    "ad text locks it": 82
+  },
+  "on_target_titles": 395,
+  "on_target_locked": 292,
+  "pay_listed": 339,
+  "disqualified": 921,
+  "shortlist": 83,
+  "by_site": {
+    "himalayas": {
+      "postings": 116,
+      "open": 14,
+      "locked": 102,
+      "unclear": 0
+    },
+    "pnet": {
+      "postings": 27,
+      "open": 26,
+      "locked": 1,
+      "unclear": 0
+    },
+    "indeed": {
+      "postings": 190,
+      "open": 24,
+      "locked": 166,
+      "unclear": 0
+    },
+    "remoteok": {
+      "postings": 166,
+      "open": 3,
+      "locked": 68,
+      "unclear": 95
+    },
+    "weworkremotely": {
+      "postings": 217,
+      "open": 12,
+      "locked": 67,
+      "unclear": 138
+    },
+    "jobicy": {
+      "postings": 157,
+      "open": 6,
+      "locked": 151,
+      "unclear": 0
+    },
+    "workingnomads": {
+      "postings": 34,
+      "open": 2,
+      "locked": 18,
+      "unclear": 14
+    },
+    "glassdoor": {
+      "postings": 95,
+      "open": 0,
+      "locked": 62,
+      "unclear": 33
+    },
+    "remotive": {
+      "postings": 12,
+      "open": 8,
+      "locked": 4,
+      "unclear": 0
+    }
+  },
+  "source_status": {
+    "boards": {
+      "remotive": 72,
+      "himalayas": 120,
+      "jobicy": 157,
+      "remoteok": 166,
+      "weworkremotely": 227,
+      "workingnomads": 35,
+      "pnet": 68
+    },
+    "jobspy": {
+      "GTM engineer / usa": 12,
+      "revenue operations / usa": 60,
+      "sales operations manager / usa": 20,
+      "marketing automation / usa": 60,
+      "growth marketer / usa": 60,
+      "account executive EMEA / usa": 28,
+      "GTM engineer / uk": 4,
+      "revenue operations / uk": 60,
+      "sales operations manager / uk": 2,
+      "marketing automation / uk": 58,
+      "growth marketer / uk": 16,
+      "account executive EMEA / uk": 32,
+      "GTM engineer / south africa": 0,
+      "revenue operations / south africa": 9,
+      "sales operations manager / south africa": 13,
+      "marketing automation / south africa": 7,
+      "growth marketer / south africa": 5,
+      "account executive EMEA / south africa": 0
+    }
+  },
+  "rates": "ECB rates 2026-11-09",
+  "run_date": "2026-11-10",
+  "note": "Live run, 6 search terms from profile.example.yaml, ads from the last 7 days. Jobicy was re-fetched after a fix (it answers HTTP 400 for tags with no jobs). Glassdoor has no South Africa site, so it returned 0 there."
+}

@@ -1,0 +1,78 @@
+{
+  "rows_scraped": 50,
+  "unique_postings": 50,
+  "remote_open": 19,
+  "remote_locked": 22,
+  "remote_unclear": 9,
+  "pct_locked": 44.0,
+  "pct_open": 38.0,
+  "lock_reasons": {
+    "location is tied to": 7,
+    "board scope is": 5,
+    "ad text locks it": 5,
+    "title names a territory": 5
+  },
+  "on_target_titles": 17,
+  "on_target_locked": 7,
+  "pay_listed": 11,
+  "disqualified": 41,
+  "shortlist": 8,
+  "by_site": {
+    "himalayas": {
+      "postings": 6,
+      "open": 3,
+      "locked": 3,
+      "unclear": 0
+    },
+    "jobicy": {
+      "postings": 5,
+      "open": 2,
+      "locked": 3,
+      "unclear": 0
+    },
+    "glassdoor": {
+      "postings": 6,
+      "open": 0,
+      "locked": 3,
+      "unclear": 3
+    },
+    "pnet": {
+      "postings": 4,
+      "open": 3,
+      "locked": 1,
+      "unclear": 0
+    },
+    "remoteok": {
+      "postings": 7,
+      "open": 2,
+      "locked": 3,
+      "unclear": 2
+    },
+    "weworkremotely": {
+      "postings": 6,
+      "open": 2,
+      "locked": 2,
+      "unclear": 2
+    },
+    "indeed": {
+      "postings": 6,
+      "open": 3,
+      "locked": 3,
+      "unclear": 0
+    },
+    "workingnomads": {
+      "postings": 6,
+      "open": 2,
+      "locked": 2,
+      "unclear": 2
+    },
+    "remotive": {
+      "postings": 4,
+      "open": 2,
+      "locked": 2,
+      "unclear": 0
+    }
+  },
+  "source_status": {},
+  "rates": "fixed fallback rates (13 Oct 2026)"
+}
